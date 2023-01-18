@@ -3,6 +3,7 @@ import {useState, useMemo} from "react";
 export default function App() {
   const [weight, setWeight] = useState(40);
   const [height, setHeight] = useState(1.5);
+  const [health, setHealth] = useState(null);
 
 
   function displayWeight(e) {
@@ -17,6 +18,14 @@ export default function App() {
 
   function calculateBmi(w, h) {
     let result = w / (h * h)
+
+    // set healthy status
+    if(result < 18.5 || result > 24.9) {
+      setHealth(false);
+    } else if(result >= 18.5 && result <= 24.9) {
+      setHealth(true);
+    }
+
     return result.toFixed(2);
   }
 
@@ -48,7 +57,7 @@ export default function App() {
         </div>
 
         {/* display the BMI */}
-        <p className="bmi">Your BMI: {bmi}</p>
+        <p className="bmi">Your BMI: <span className={health ? "okay" : "danger"}>{bmi}</span></p>
       </div>
     </div>
   )
