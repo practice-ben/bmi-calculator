@@ -33,8 +33,8 @@ export default function App() {
           <h4>Weight</h4>
           <input type="range" min="1" max="700" onChange={displayWeight} value={weight} />
           <p>
+            Kilograms: 
             <span className="bold">{weight}</span>
-            Kilograms
           </p>
         </div>
         {/* height */}
@@ -42,8 +42,8 @@ export default function App() {
           <h4>Height</h4>
           <input type="range" min="0.1" max="3" step="0.01" onChange={displayHeight} value={height} />
           <p>
+            Meters: 
             <span className="bold">{height}</span>
-            Meters
           </p>
         </div>
 

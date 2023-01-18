@@ -9,7 +9,20 @@ body {
   display: grid;
   place-items: center;
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 50px;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .bold {
   font-weight: 600;
   font-size: 18px;
+  margin-left: 8px;
 }
