@@ -9,3 +9,7 @@ body {
   display: grid;
   place-items: center;
 }
+.bold {
+  font-weight: 600;
+  font-size: 18px;
+}
