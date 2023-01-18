@@ -4,6 +4,7 @@ export default function App() {
   const [weight, setWeight] = useState(40);
   const [height, setHeight] = useState(1.5);
   const [health, setHealth] = useState(null);
+  const [status, setStatus] = useState("Healthy");
 
 
   function displayWeight(e) {
@@ -20,10 +21,15 @@ export default function App() {
     let result = w / (h * h)
 
     // set healthy status
-    if(result < 18.5 || result > 24.9) {
+    if(result < 18.5) {
       setHealth(false);
+      setStatus("Underweight");
     } else if(result >= 18.5 && result <= 24.9) {
       setHealth(true);
+      setStatus("Healthy");
+    } else {
+      setHealth(false)
+      setStatus("Overweight");
     }
 
     return result.toFixed(2);
@@ -58,6 +64,7 @@ export default function App() {
 
         {/* display the BMI */}
         <p className="bmi">Your BMI: <span className={health ? "okay" : "danger"}>{bmi}</span></p>
+        <p>You are <span className={health ? "okay" : "danger"}>{status}</span></p>
       </div>
     </div>
   )
