@@ -1,8 +1,8 @@
 import {useState, useMemo} from "react";
 
 export default function App() {
-  const [weight, setWeight] = useState(0);
-  const [height, setHeight] = useState(0);
+  const [weight, setWeight] = useState(40);
+  const [height, setHeight] = useState(1.5);
 
 
   function displayWeight(e) {
