@@ -48,7 +48,7 @@ export default function App() {
         </div>
 
         {/* display the BMI */}
-        <p className="bmi">{bmi}</p>
+        <p className="bmi">Your BMI: {bmi}</p>
       </div>
     </div>
   )
