@@ -16,7 +16,8 @@ export default function App() {
   }
 
   function calculateBmi(w, h) {
-    return w / (h * h);
+    let result = w / (h * h)
+    return result.toFixed(2);
   }
 
   const bmi = useMemo(() => calculateBmi(weight, height), [weight, height]);
