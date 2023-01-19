@@ -46,7 +46,7 @@ export default function App() {
         {/* weight */}
         <div className="weight">
           <h4>Weight</h4>
-          <div className="weight-inputs">
+          <div className="classified-inputs">
             <input type="range" min="1" max="700" onChange={displayWeight} value={weight} />
             <input type="text" onChange={displayWeight} className="text-input" placeholder="Input your weight" />
           </div>
@@ -58,7 +58,10 @@ export default function App() {
         {/* height */}
         <div className="height">
           <h4>Height</h4>
-          <input type="range" min="0.1" max="3" step="0.01" onChange={displayHeight} value={height} />
+          <div className="classified-inputs">
+            <input type="range" min="0.1" max="3" step="0.01" onChange={displayHeight} value={height} />
+            <input type="text" onChange={displayHeight} className="text-input" placeholder="Input your height" />
+          </div>
           <p>
             Meters: 
             <span className="bold">{height}</span>
