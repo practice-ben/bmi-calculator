@@ -37,3 +37,14 @@ body {
 .okay {
   color: green;
 }
+
+.weight-inputs {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.text-input {
+  width: 120px;
+  padding: 5px;
+  border: 1px solid gray;
+}

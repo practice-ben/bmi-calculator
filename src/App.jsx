@@ -46,7 +46,10 @@ export default function App() {
         {/* weight */}
         <div className="weight">
           <h4>Weight</h4>
-          <input type="range" min="1" max="700" onChange={displayWeight} value={weight} />
+          <div className="weight-inputs">
+            <input type="range" min="1" max="700" onChange={displayWeight} value={weight} />
+            <input type="text" onChange={displayWeight} className="text-input" placeholder="Input your weight" />
+          </div>
           <p>
             Kilograms: 
             <span className="bold">{weight}</span>
